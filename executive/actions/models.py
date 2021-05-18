@@ -4,7 +4,7 @@ db = orm.SqliteDatabase('executive.db')
 
 class BaseModel(orm.Model):
     class Meta:
-        database = orm.SqliteDatabase('executive.db')
+        database = db
 
 class Project(BaseModel):
     name = orm.CharField()
