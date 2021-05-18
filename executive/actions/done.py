@@ -1,3 +1,4 @@
+from __future__ import print_function
 from sys import argv
 from executive.actions.models import Action, ScheduledAction
 from datetime import datetime

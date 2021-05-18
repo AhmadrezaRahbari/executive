@@ -1,4 +1,5 @@
 """The script of greatness!"""
+from __future__ import print_function
 
 from executive.actions.models import Action, ScheduledAction, Project
 from executive.tools.cron import CronHandler
