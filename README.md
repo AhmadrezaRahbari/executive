@@ -1,16 +1,27 @@
-executive
+Executive 
 =========
 
-Preserve your precious executive function with a command-line task system that decides for you.
+Preserve your precious executive function with a command-line task system that decides for you. (Original Source Code by Toon Alfrink)
+
+**Compatibility update**
+=========
+For your convenience, we have made this version of our precious Executive Function compatible both with Python 2.7 and Python 3.6+
+
+**Python 3 Transition**
+
+`futurize` has been used to make the source code compatible with Python 3 as well as Pyton 2.7. For details please visit https://python-future.org/futurize.html
 
 **Installation**
 =========
 
 Install Python 2.7 from here: https://www.python.org/downloads/release/python-2717/
 
+Install Python 3.6.12 from here: https://www.python.org/downloads/release/python-3612/
+For newer versions of Python please visit https://www.python.org
+
 **Pull everything from Github**
 
-`git clone https://github.com/ToonAlfrink/executive /path/to/executive`
+`git clone https://github.com/AhmadrezaRahabri/executive /path/to/executive`
 
 **Make sure your pythonpath contains the directory you just pulled**
 
@@ -18,10 +29,16 @@ unix: `export PYTHONPATH=/path/to/executive`
 
 windows: `set export PYTHONPATH=/path/to/executive`
 
+Mac: `PYTHONPATH="/path/to/executive:${PYTHONPATH}"`
+
 **Install dependencies**
 
 `pip install peewee`
 `pip install pytz`
+
+To install these packages with conda run:
+
+`conda install -c conda-forge`  `peewee conda install -c anaconda pytz`
 
 **on mac you may have some locale issues**
 
