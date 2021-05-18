@@ -1,4 +1,8 @@
 from __future__ import print_function
+from __future__ import unicode_literals
+from builtins import input
+from builtins import range
+from builtins import object
 from sys import argv
 from django.db import connection, transaction
 import traceback
@@ -14,7 +18,7 @@ class RawSQL(object):
                 else:
                     if query.startswith("delete"):
                         if not "where" in query:
-                            confirm = raw_input("Really delete everything?\nIf so, please write 'yes sir, delete everything.'\n>")
+                            confirm = input("Really delete everything?\nIf so, please write 'yes sir, delete everything.'\n>")
                             if confirm != "yes sir, delete everything.":
                                 raise Exception("aborted")
                             

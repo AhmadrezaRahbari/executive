@@ -1,7 +1,4 @@
 """Handle the cron entries of scheduled actions"""
-from __future__ import unicode_literals
-from builtins import range
-from builtins import object
 from datetime import datetime, timedelta
 import pytz
 
@@ -26,7 +23,7 @@ class CronHandler(object):
             maxdata['day'] = month_maxday
 
         maxdate = pytz.timezone('Europe/Amsterdam').localize(
-            datetime(**{k : v for k, v in list(maxdata.items()) if not k=='weekday'})
+            datetime(**{k : v for k, v in maxdata.items() if not k=='weekday'})
             )
         if maxdate < t:
             return None
@@ -102,9 +99,9 @@ class CronHandler(object):
         for i, tab in enumerate(cron.split()):
             if "-" in tab:
                 start, finish = tab.split("-")
-                result.append(list(range(int(start), int(finish))))
+                result.append(range(int(start), int(finish)))
             elif "*" in tab:
-                _list = list(range(*ranges[i]))
+                _list = range(*ranges[i])
                 if "/" in tab:
                     interval = int(tab.split("/")[1])
                     _list = _list[::interval]

@@ -1,6 +1,8 @@
 """The script of greatness!"""
 from __future__ import print_function
+from __future__ import unicode_literals
 
+from builtins import object
 from executive.actions.models import Action, ScheduledAction, Project
 from executive.tools.cron import CronHandler
 from datetime import datetime, date, timedelta

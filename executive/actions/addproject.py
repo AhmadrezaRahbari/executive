@@ -1,4 +1,5 @@
 from __future__ import print_function
+from __future__ import unicode_literals
 from sys import argv
 from executive.actions.models import Project
 if __name__ == "__main__":

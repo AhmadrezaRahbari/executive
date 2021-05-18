@@ -1,11 +1,9 @@
-from __future__ import unicode_literals
-from builtins import object
 import peewee as orm
 
 db = orm.SqliteDatabase('executive.db')
 
 class BaseModel(orm.Model):
-    class Meta(object):
+    class Meta:
         database = db
 
 class Project(BaseModel):

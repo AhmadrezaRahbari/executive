@@ -1,4 +1,6 @@
 from __future__ import print_function
+from __future__ import unicode_literals
+from builtins import object
 from sys import argv
 from executive.actions.models import Action, ScheduledAction
 from datetime import datetime
